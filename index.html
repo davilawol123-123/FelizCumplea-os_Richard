@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡FELIZ CUMAPLEAÑOS!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="confetti-container"></div>
+
+    <header>
+        <h1>¡FELIZ CUMAPLEAÑOS, HERMANO RICHARD! 🎂🎉</h1>
+    </header>
+
+    <main>
+        <main>
+            <section class="cards-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagen/WhatsApp Image 2026-10-11 at 10.06.43 PM.jpeg" alt="Feliz Cumpleaños">
+                            <h3>¡FELIZ CUMPLEAÑOS! 🎉</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>¡Feliz día, hermano! Que pases un cumpleaños increíble y que este nuevo año de vida esté
+                                lleno de pura felicidad y grandes momentos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagen/WhatsApp Image 2026-10-11 at 10.06.43 PM (1).jpeg"
+                                alt="Apoyo Incondicional">
+                            <h3>APOYO INCONDICIONAL 🤝</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Te agradezco de corazón por ayudarme tanto en mis estudios, en la familia y por estar
+                                siempre firme cuando más lo necesito, hermano.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagen/WhatsApp Image 2026-10-11 at 10.06.19 PM.jpeg" alt="Mentalidad de Éxito"
+                                style="width: 100%; height: 260px; object-fit: contain; object-position: center; display: block; margin: 0 auto;">
+                            <h3>SÉ EL MEJOR 🚀</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Nunca olvides el gran potencial que tienes. Sigue mejorando como persona día a día y sé
+                                que lograrás grandes cosas en la vida.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="coupon-section">
+            <h2>🎟️ Cupón de Regalo Canjeable 🎟️</h2>
+            <div class="coupon-card">
+                <h3>VALES ESPECIALES PARA HERMANOS</h3>
+                <p>Este cupón te otorga el derecho indiscutible a:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>🍔 1 Salida a comer lo que quieras (pagas tú... mentira, pago yo xD)</li>
+                    <li>🎮 Una tarde entera de videojuegos sin que nadie moleste</li>
+                </ul>
+                <button id="btnCanjear" onclick="canjearCupon()">¡Canjear Cupón!</button>
+                <p id="mensajeCupon" style="margin-top: 15px; font-weight: bold; color: #00f2fe;"></p>
+            </div>
+        </section>
+
+        <section class="secret-section" style="margin: 40px 0;">
+            <h2>🎁 Mensaje Secreto de Cumpleaños 🎁</h2>
+            <button id="btnMensaje" onclick="mostrarMensajeSecreto()"
+                style="padding: 12px 25px; background: #ff007f; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                Revelar Mensaje Oculto
+            </button>
+            <div id="cajaMensajeSecreto"
+                style="display: none; margin-top: 20px; padding: 20px; background: #1e293b; border: 2px dashed #00f2fe; border-radius: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.1rem; color: #e2e8f0;">
+                    "Richard, eres un hermano de otro nivel. Gracias por todas las risas, por las pláticas y por
+                    apoyarnos siempre. ¡Que este nuevo año de vida venga recargado de metas cumplidas y puro éxito en
+                    todo lo que te propongas! ¡Feliz cumpleaños!" 🚀🔥
+                </p>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+
+        <div class="music-player-container" style="text-align: center; margin: 30px 0;">
+            <button id="btnMusica" onclick="toggleMusica()"
+                style="background: #00f2fe; color: #0b0f19; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 0 10px rgba(0,242,254,0.4);">
+                🎵 Reproducer Melodía de Cumpleaños 🎵
+            </button>
+            <audio id="audioCumple" loop>
+                <source src="Musica/FELIZ CUMPLEAÑOS ORIGINAL - Versión en español ♪♫.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+
+            <section class="guestbook-section"
+                style="max-width: 500px; margin: 40px auto; background: #1e293b; padding: 25px; border-radius: 15px; border: 2px solid #ff007f;">
+                <h2>📖 Libro de Visitas de Richard</h2>
+                <p style="font-size: 0.95rem; color: #94a3b8;">¡Deja tu firma o un comentario épico de este día!</p>
+
+                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
+                    <input type="text" id="inputNombre" placeholder="Tu nombre (Ej: Richard el Pro)"
+                        style="padding: 10px; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white;">
+                    <textarea id="inputComentario" placeholder="Escribe tu mensaje aquí..." rows="3"
+                        style="padding: 10px; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; resize: none;"></textarea>
+                    <button onclick="agregarComentario()"
+                        style="background: #ff007f; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer;">Guardar
+                        en el Libro</button>
+                </div>
+
+                <div id="listaComentarios" style="margin-top: 20px; text-align: left;"></div>
+            </section>
+
+            <div id="confetti-container"></div>
+            <section class="time-section"
+                style="max-width: 500px; margin: 40px auto; background: #1e293b; padding: 25px; border-radius: 15px;">
+                <h2>⏳ Tiempo de Vida del Pro Richard ⏳</h2>
+                <p style="color: #94a3b8; font-size: 0.95rem;">Calculando cada segundo de su existencia épica:</p>
+                <div id="contadorHermandad"
+                    style="font-size: 1.1rem; font-weight: bold; color: #ffde59; margin-top: 15px;">
+                    Cargando tiempo épico...
+                </div>
+            </section>
+
+            <section class="hugs-section"
+                style="max-width: 500px; margin: 40px auto; background: #1e293b; padding: 25px; border-radius: 15px; border: 2px solid #ff007f; text-align: center;">
+                <h2>🫂 Contador Oficial de Abrazos 🫂 </h2>
+                <p style="color: #94a3b8; font-size: 0.95rem;">¡Presiona el botón para reclamar tus abrazos de
+                    cumpleaños
+                    hoy!</p>
+                <button onclick="sumarAbrazo()"
+                    style="background: #ff007f; color: white; border: none; padding: 12px 25px; font-weight: bold; border-radius: 8px; cursor: pointer; margin-top: 10px;">
+                    ¡Reclamar Abrazo! 🤗
+                </button>
+                <p style="margin-top: 15px; font-size: 1.2rem; color: #00f2fe;">Abrazos acumulados: <span
+                        id="contadorAbrazos" style="font-weight: bold;">0</span></p>
+            </section>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <button id="btnTema" onclick="cambiarTemaFiesta()"
+                    style="background: #ffde59; color: #0b0f19; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; box-shadow: 0 0 10px rgba(255,222,89,0.4);">
+                    ✨ Activar Modo Fiesta Tropical
+                </button>
+            </div>
+</body>
+
+</html>
